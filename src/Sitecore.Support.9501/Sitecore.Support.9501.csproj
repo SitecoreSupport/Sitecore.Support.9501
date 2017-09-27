@@ -61,8 +61,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\Sitecore.XA.Foundation.SitecoreExtensions.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.XA.Foundation.Variants.Abstractions">
-      <HintPath>..\..\..\..\Sitecores\sxa1u4sc82u4\Website\bin\Sitecore.XA.Foundation.Variants.Abstractions.dll</HintPath>
+    <Reference Include="Sitecore.XA.Foundation.Variants.Abstractions, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Sitecore.XA.Foundation.Variants.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
