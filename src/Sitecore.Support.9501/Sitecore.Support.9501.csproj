@@ -65,10 +65,6 @@
       <HintPath>..\..\..\..\Sitecores\sxa1u4sc82u4\Website\bin\Sitecore.XA.Foundation.Variants.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,7 +72,9 @@
     <Compile Include="XA\Foundation\Variants\Abstractions\Services\AvailableRenderingVariantService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\zzz\Sitecore.Support.9501.config" />
+    <Content Include="App_Config\Include\zzz\Sitecore.Support.9501.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
