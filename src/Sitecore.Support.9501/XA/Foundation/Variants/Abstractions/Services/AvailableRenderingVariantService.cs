@@ -1,12 +1,13 @@
 ﻿namespace Sitecore.Support.XA.Foundation.Variants.Abstractions.Services
 {
+    using System.Linq;
+    using Microsoft.Extensions.DependencyInjection;
     using Sitecore.Data;
     using Sitecore.Data.Items;
-    using Sitecore.XA.Foundation.IoC;
+    using Sitecore.DependencyInjection;
     using Sitecore.XA.Foundation.Presentation;
     using Sitecore.XA.Foundation.SitecoreExtensions.Extensions;
     using Sitecore.XA.Foundation.SitecoreExtensions.Repositories;
-    using System.Linq;
 
     public class AvailableRenderingVariantService : Sitecore.XA.Foundation.Variants.Abstractions.Services.AvailableRenderingVariantService
     {
@@ -23,7 +24,7 @@
 
         protected override bool InheritsFromAllowedTemplate(string pageTemplateId)
         {
-            TemplateItem templateItem = ServiceLocator.Current.Resolve<IContentRepository>().GetTemplate(new ID(pageTemplateId));
+            TemplateItem templateItem = ServiceProviderServiceExtensions.GetService<IContentRepository>(ServiceLocator.ServiceProvider).GetTemplate(new ID(pageTemplateId));
             return this.AllowedTemplates.Any<ID>(id => templateItem.DoesTemplateInheritFrom(id));
         }
     }
